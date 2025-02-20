@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор складу палива</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор складу палива</h1>
+        
+        <form id="fuelForm">
+            <label for="HP">Водень (HP, %):</label>
+            <input type="number" id="HP" value="2.8" required>
+
+            <label for="CP">Вуглець (CP, %):</label>
+            <input type="number" id="CP" value="72.3" required>
+
+            <label for="SP">Сірка (SP, %):</label>
+            <input type="number" id="SP" value="2.00" required>
+
+            <label for="NP">Азот (NP, %):</label>
+            <input type="number" id="NP" value="1.10" required>
+
+            <label for="OP">Кисень (OP, %):</label>
+            <input type="number" id="OP" value="1.30" required>
+
+            <label for="WP">Волога (WP, %):</label>
+            <input type="number" id="WP" value="5.5" required>
+
+            <label for="AP">Зола (AP, %):</label>
+            <input type="number" id="AP" value="15.0" required>
+
+            <button type="button" onclick="calculate()">Розрахувати</button>
+        </form>
+
+        <div id="results">
+            <h2>Результати:</h2>
+            <p id="dryMass"></p>
+            <p id="combustibleMass"></p>
+            <p id="heatValue"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
