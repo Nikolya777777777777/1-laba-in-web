@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор мазуту</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор складу мазуту</h1>
+        
+        <form id="fuelForm">
+            <label for="C">Вуглець (C₉, %):</label>
+            <input type="number" id="C" value="85.50" required>
+
+            <label for="H">Водень (H₉, %):</label>
+            <input type="number" id="H" value="11.20" required>
+
+            <label for="O">Кисень (O₉, %):</label>
+            <input type="number" id="O" value="0.80" required>
+
+            <label for="S">Сірка (S₉, %):</label>
+            <input type="number" id="S" value="2.50" required>
+
+            <label for="V">Ванадій (V₉, мг/кг):</label>
+            <input type="number" id="V" value="333.3" required>
+
+            <label for="Qidaf">Нижча теплота згоряння (Qidaf, МДж/кг):</label>
+            <input type="number" id="Qidaf" value="40.40" required>
+
+            <label for="W">Вологість робочої маси (Wₚ, %):</label>
+            <input type="number" id="W" value="2.00" required>
+
+            <label for="A">Зольність сухої маси (A₉, %):</label>
+            <input type="number" id="A" value="0.15" required>
+
+            <button type="button" onclick="calculate()">Розрахувати</button>
+        </form>
+
+        <div id="results">
+            <h2>Результати:</h2>
+            <p id="composition"></p>
+            <p id="heatValue"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
